@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Energy quiz</title>
+        <link rel="stylesheet" href=quiz.css>
+        <link rel="shortcut icon" href="energy_icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Karla|Didact+Gothic" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+        	<h1>Energy Quiz</h1>
+        	<div class="get_question"> Bring me a question! </div>
+        	<br>
+        	<p class="display_question"> </p>
+        	<br>
+            <h2>Your answer :</h2>
+        	
+        	<input type="text" id="answer_box"> 
+        	<br>
+            <br>
+        	<p class="button_check"> Check! </p>
+        	<br>
+            <p class="correct_answer"> </p>
+        	<br>
+        	<p class="check">You just won: <a id="points"> 0 </a> points!</p>
+       
+            <p class="summary_points">Your total points in this round: <a id="total_points"> 0 </a> points</p>
+
+            <p class="hints">  </p>
+        </div>
+        <div class="get_home"> <a class="links" href=../index.html> Back to weather</a>
+        </div>
+
+        <!-- Inkludera jQuery -->
+        <script src="jQuery.js"></script>
+        <!-- Din egen kod -->
+        <script src="quiz.js"></script>
+    </body>
+</html>

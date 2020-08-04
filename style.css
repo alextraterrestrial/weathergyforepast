@@ -1,0 +1,212 @@
+:root {
+    --darkblue: #001219;
+    --middleblue: #223c44;
+    --blue: #1a2d33;
+
+    --beige: #FFEBDB;
+    --darkbeige: #a19791;
+    --white: #F7F8F4;
+    --orange: #FEA45B;
+    --coral: #F8444E;
+    --font1: 'Karla', sans-serif;
+    --font2: 'Didact Gothic', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 5vh;
+  background-color: var(--darkblue);
+  font-family: var(--font1);
+  color: var(--beige);
+  text-shadow: 3px 3px var(--darkblue);
+}
+
+button{
+  background-color: var(--darkbeige);
+  border-radius: 10px;
+  font-family: var(--font2);
+  color: var(--darkblue);
+  font-size: 15px;
+}
+
+#cloud_div {
+  background-image: url(images/clouds0.png);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 200px 300px 300px;
+  grid-gap: 10px;
+  background-color: var(--darkblue);
+ /* margin-bottom: 1vh;*/
+}
+
+.container > div {
+  background-color: var(--blue);
+}
+
+.header {
+  text-align: center;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding-top: 3vh;
+  font-size: 50px;
+  color: var(--beige);
+  background-color: var(--middleblue);
+}
+.info{
+  font-size: 20px;
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+
+}
+
+input{
+  margin: auto;
+  background-color: var(--beige);
+  height: 20px;
+
+}
+.links{
+  text-decoration: none;
+  color: var(--beige);
+}
+.links:hover{
+  color: var(--darkbeige);
+  margin-left: 5px;
+}
+
+.largebox {
+  grid-column: 1/4;
+  grid-row: 1/3;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 340px 100px 100px 100px;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 1000px;
+  height: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: var(--beige);
+  background-color: var(--darkblue);
+  color: var(--beige);
+  font-family: var(--font2);
+}
+
+#navHeader{
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  margin: 5px;
+  font-size: 30px;
+  color: var(--darkbeige);
+}
+
+#selectedDate{
+  margin: 0px;
+}
+
+.smallbox{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#temp_div, #cloud_div, #wind_div, #thunder_div, #humid_div{
+  flex-grow: 1;
+}
+
+#time_period_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--middleblue);
+}
+
+.widget_text {
+  background-color: var(--blue);
+  font-size: 12px;
+  margin: 0px;
+  text-align: center;
+}
+
+.widget_title {
+  padding: 10px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--font2);
+  background-color: var(--middleblue);
+}
+
+#wind_div {
+  padding: 10px;
+}
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .header{
+    width: 700px;
+  }
+  .nav {
+    width: 700px;
+    grid-template-columns: 120px 120px 100px 120px 80px 80px 80px;
+  }
+  .container{
+    width: 700px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 300px 300px 300px;
+  }
+  .info{
+    width: 600px;
+  }
+  .largebox {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+}
+/* Use a media query to add a breakpoint at 400px: */
+@media screen and (max-width: 400px) {
+  .header{
+    width: 350px;
+ /*   height: 25vh;*/
+  }
+  .nav {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+  }
+  .container{
+    width: 350px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px 300px;
+  }
+  .info{
+    width: 300px;
+    font-size: 15px;
+  }
+  .largebox {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+}

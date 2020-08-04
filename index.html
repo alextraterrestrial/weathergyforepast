@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherEnergy</title>
+    <!-- <link rel="shortcut icon" href="images/clouds6.png"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="weatherSymbol.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Karla|Didact+Gothic" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="dataset.js"></script>
+</head>
+
+<body>
+    <div class="header">WEATHERGY FOREPAST<br>
+        <p class="info">The following data represent historical weather and energy information from Medicon Village in Lund. Select a time period you want to visualize by chosing a date, then click on a point in the energy chart to zoom in on that specific day.</p>
+    </div>
+    <div class="nav">
+        <div class="menuItem"> Select Date </div>
+        <div class="menuItem">
+            <input type="date" id="myDate" value="" placeholder="YYYY-MM-DD">
+        </div>
+        <div class="menuItem">
+
+        </div>
+        <div class="menuItem"> </div>
+        <div class="menuItem menuRight"> <a class="links" href=http://ectogrid.com target="_blank">Ectogrid</a></div>
+        <div class="menuItem menuRight"> <a class="links" href=energy_quiz/quiz.html>Quiz </a> </div> <div class="menuItem menuRight"> <a class="links" href=aboutus.html>About Us</a></div>
+    </div>
+    <div class="container">
+
+        <div class="largebox">
+            <div id="time_period_container">
+                <button id="show_week" style="display: none">Back to week</button>
+                <p id="selectedDate" class="widget_title">Energy produced and consumed</p>
+            </div>
+
+            <canvas id='energy_widget'></canvas>
+        </div>
+
+        <div class="smallbox" id="tempbox">
+            <p class="widget_title">Temperature</p>
+            <p class="widget_text">Average temperature for chosen time period.</p>
+            <div id="temp_div">
+                <canvas id="temp_widget"></canvas>
+            </div>
+        </div>
+
+        <div class="smallbox" id="cloudbox">
+            <p class="widget_title">Cloud Coverage</p>
+            <div id="cloud_div">
+                <p class="widget_text">Average cloud coverage for chosen time period.</p>
+            </div>
+        </div>
+
+        <div class="smallbox" id="windbox">
+            <p class="widget_title">Wind Speed</p>
+            <p class="widget_text">Average wind speed for chosen time period, shown in m/s.</p>
+            <div id="wind_div">
+                <canvas id="wind_widget"></canvas>
+            </div>
+        </div>
+
+        <div class="smallbox" id="symbolbox">
+            <p class="widget_title">Weather Symbol</p>
+            <p class="widget_text">Weather symbol for the average weather for chosen time period.</p>
+            <div id="showWeatherSymbol"></div>
+        </div>
+
+        <div class="smallbox" id="thunderbox">
+            <p class="widget_title">Thunder Probability</p>
+            <p class="widget_text">Thunder probability for chosen time period, shown in %.</p>
+            <div id="thunder_div">
+                <canvas id="thunder_widget"></canvas>
+            </div>
+        </div>
+
+        <div class="smallbox" id="humiditybox">
+            <p class="widget_title">Humidity</p>
+            <p class="widget_text">Average humidity for chosen time period, shown in %.</p>
+            <div id="humid_div">
+                <canvas id="humid_widget"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <script src="icons.js"></script>
+    <script src="EnergyWidget.js"></script>
+    <script src="CloudCoverageWidget.js"></script>
+    <script src="Gauge.js"></script>
+    <script src="HumidWidget.js"></script>
+    <script src="SymbolWidget.js"></script>
+    <script src="TempWidget.js"></script>
+    <script src="ThunderWidget.js"></script>
+    <script src="WeatherData.js"></script>
+    <script src="WindWidget.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

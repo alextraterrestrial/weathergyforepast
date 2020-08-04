@@ -1,0 +1,146 @@
+:root {
+    --darkblue: #001219;
+    --middleblue: #223c44;
+    --blue: #1a2d33;
+    --beige: #FFEBDB;
+    --darkbeige: #a19791;
+    --white: #F7F8F4;
+    --orange: #FEA45B;
+    --coral: #F8444E;
+    --font1: 'Karla', sans-serif;
+    --font2: 'Didact Gothic', sans-serif;
+}
+
+body {
+    font-family: var(--font2);
+    background-color: var(--darkblue);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.bild {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 230px;
+    width: 180px;
+    image-orientation: 0deg;
+}
+
+.get_home {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.grid {
+    display: grid;
+    margin: auto;
+    width: 80vw;
+    height: 97vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 280px;
+}
+
+h2 {
+    font-size: 20px;
+    color: var(--beige);
+    text-shadow: 3px 3px var(--darkblue);
+}
+
+img {
+    height: 230px;
+}
+
+.info {
+    font-size: 11px;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+    color: var(--orange);
+}
+
+.links {
+    text-decoration: none;
+    color: var(--beige);
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        height: 65vh;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .wrapper {
+        height: 97vh;
+        overflow: scroll;
+    }
+}
+
+.text {
+    padding: 5px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    color: var(--beige);
+    text-shadow: 3px 3px var(--darkblue);
+}
+
+.white {
+    height: 230px;
+    width: 180px;
+    opacity: 0;
+}
+
+.white:hover {
+    background-color: var(--orange);
+    opacity: 0.85;
+    font-size: 13px;
+}
+
+.wrap {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    margin: auto;
+    width: 80vw;
+    height: 97vh;
+    background-color: var(--blue);
+    border-radius: 20px;
+
+}
+
+/* The portraits */
+#Alexander {
+    background-image: url(portraits/Alex.jpg);
+}
+
+#Caroline {
+    background-image: url(portraits/Carro.jpg);
+}
+
+#Christina {
+    background-image: url(portraits/Christina.jpg);
+}
+
+#Christine {
+    background-image: url(portraits/Christine.jpg);
+}
+
+#Hampus {
+    background-image: url(portraits/Hampus.jpg);
+}
+
+#Josefine {
+    background-image: url(portraits/Josse.jpg);
+}

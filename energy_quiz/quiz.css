@@ -1,0 +1,147 @@
+:root {
+	--darkblue: #001219;
+    --middleblue: #223c44;
+    --blue: #1a2d33;
+    --beige: #FFEBDB;
+    --darkbeige: #a19791;
+    --white: #F7F8F4;
+    --orange: #FEA45B;   
+    --coral: #F8444E;
+    --font1: 'Karla', sans-serif;
+    --font2: 'Didact Gothic', sans-serif;
+}
+body{
+	text-align: center;
+	font-family: var(--font2);
+	background-color: var(--darkblue);
+	font-size: 20px;
+}
+h1{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 50px;
+	color: var(--beige);
+	text-shadow: 3px 3px var(--darkblue);
+}
+h2{
+	font-size: 20px;
+	color: var(--beige);
+	text-shadow: 3px 3px var(--darkblue);
+	margin-top: 0px;
+}
+.wrapper{
+	margin: auto;
+	width: 800px;
+	height: 750px;
+	background-color: var(--blue);
+	border-radius: 20px;
+}
+.get_question{
+	margin: auto;
+	width: 200px;
+	padding: 10px;
+	background: var(--coral);
+	text-align: center;
+	color: var(--beige);
+	border-radius: 20px;
+	box-shadow: 5px 5px var(--darkblue);
+}
+.display_question{
+	margin: auto;
+	padding-top: 15px;
+	background-color: var(--middleblue);
+	width: 700px;
+	min-height:50px;
+	font-size: 17px;
+	color: var(--beige);
+}
+#answer_box{
+	margin: auto;
+	border: 2px dotted var(--blue);
+	width: 700px;
+	height:50px;
+	font-size: 17px;
+	font-style: italic;
+	text-align: center;
+	color: var(--blue);
+	background-color: var(--white);
+}
+.button_check{
+	margin: auto;
+	width: 200px;
+	padding: 10px;
+	background: var(--orange);
+	text-align: center;
+	color: var(--darkblue);
+	border-radius: 20px;
+	box-shadow: 5px 5px var(--darkblue);
+}
+#points{
+	color: var(--coral);
+}
+.check{
+	display: none;
+	color: var(--beige);
+}
+.summary_points{
+	display: none;
+	color: var(--beige);
+}
+.correct_answer{
+	display: none;
+	color: var(--beige);
+}
+.hints{
+	font-size: 16px;
+	color: var(--darkbeige);
+	width: 700px;
+	margin: auto;
+}
+.links{
+  text-decoration: none;
+  color: var(--beige);
+}
+.get_home{
+	text-align: right;
+	margin-right: 10px;
+}
+
+/* media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+		.wrapper{
+			width: 700px;
+			height: 80vh;
+		}
+		.display_question{
+			width: 650px;
+		}
+		#answer_box{
+			width: 650px;
+		}
+		.hints{
+			width: 650px;
+		}
+	}
+/* media query to add a breakpoint at 400px: */
+@media screen and (max-width: 375px) {
+		h2{
+			font-size: 16px;
+		}
+		.wrapper{
+			width: 350px;
+			height: 93vh;
+			overflow: scroll;
+		}
+		.display_question{
+			width: 340px;
+			font-size: 16px;
+		}
+		#answer_box{
+			width: 340px;
+			font-size: 16px;
+		}
+		.hints{
+			width: 340px;
+			font-size: 15px;
+		}
+	}
